@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F7F9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A1220" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="آکادمی تعاملی و بازی‌وار فارسی هوش مصنوعی برای نوجوانان ۱۱ تا ۱۳ سال">
+  <title>AIhub AI Explorers</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Vazirmatn-VF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/aihub.bundle.css">
+  <link rel="stylesheet" href="assets/css/explorers.css">
+  <script>try{var t=localStorage.getItem("aihub-theme"),b=localStorage.getItem("aihub-brand");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);if(b)document.documentElement.setAttribute("data-brand",b)}catch(e){}</script>
+</head>
+<body class="has-bottomnav">
+<!--ICONS: بر پایهٔ icons.sprite.html دیزاین‌سیستم + چند آیکن خطی هم‌سبک-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16Z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M12 14v4M8 20h8"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 18H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5c3-1.5 6-1.5 8 0 2-1.5 5-1.5 8 0v14c-3-1.5-6-1.5-8 0-2-1.5-5-1.5-8 0z"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#app">پرش به محتوا</a>
+<div class="app" data-sidebar="expanded">
+  <aside class="sidebar" id="sidebar" aria-label="منوی اصلی">
+    <div class="sidebar__head">
+      <a class="brand" href="#/" aria-label="خانه"><span class="brand__mark"><img src="assets/img/logo.svg" alt="" width="40" height="40"></span><span class="brand__name"><b>کاوشگران</b> هوش مصنوعی<small class="en">AI Explorers</small></span></a>
+      <button type="button" class="btn btn--ghost btn--icon sidebar__close" data-drawer-close aria-label="بستن منو"><svg class="ico"><use href="#i-x"/></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="ناوبری اصلی">
+      <p class="nav__title">یادگیری</p>
+      <a class="nav__item" data-nav="" href="#/" data-tip="خانه" data-tip-pos="side"><svg class="ico"><use href="#i-home"/></svg><span class="nav__label">خانه</span></a>
+      <a class="nav__item" data-nav="map" href="#/map" data-tip="نقشهٔ مسیر" data-tip-pos="side"><svg class="ico"><use href="#i-map"/></svg><span class="nav__label">نقشهٔ مسیر</span></a>
+      <a class="nav__item" data-nav="labs" href="#/labs" data-tip="آزمایشگاه‌ها" data-tip-pos="side"><svg class="ico"><use href="#i-flask"/></svg><span class="nav__label">آزمایشگاه‌ها</span></a>
+      <a class="nav__item" data-nav="lab" href="#/lab" data-tip="کارگاه" data-tip-pos="side"><svg class="ico"><use href="#i-pen"/></svg><span class="nav__label">کارگاه</span></a>
+      <p class="nav__title">من</p>
+      <a class="nav__item" data-nav="achievements" href="#/achievements" data-tip="دستاوردها" data-tip-pos="side"><svg class="ico"><use href="#i-trophy"/></svg><span class="nav__label">دستاوردها</span></a>
+      <a class="nav__item" data-nav="print" href="#/print" data-tip="بستهٔ چاپی" data-tip-pos="side"><svg class="ico"><use href="#i-print"/></svg><span class="nav__label">بستهٔ چاپی</span></a>
+      <p class="nav__title">بیشتر</p>
+      <a class="nav__item" data-nav="parents" href="#/parents" data-tip="ویژهٔ والدین" data-tip-pos="side"><svg class="ico"><use href="#i-users"/></svg><span class="nav__label">ویژهٔ والدین (فصل ۵)</span></a>
+      <a class="nav__item" data-nav="glossary" href="#/glossary" data-tip="واژه‌نامه" data-tip-pos="side"><svg class="ico"><use href="#i-book"/></svg><span class="nav__label">واژه‌نامه</span></a>
+      <a class="nav__item" data-nav="about" href="#/about" data-tip="درباره و پشتیبانی" data-tip-pos="side"><svg class="ico"><use href="#i-info"/></svg><span class="nav__label">درباره و پشتیبانی</span></a>
+      <a class="nav__item" data-nav="settings" href="#/settings" data-tip="تنظیمات" data-tip-pos="side"><svg class="ico"><use href="#i-gear"/></svg><span class="nav__label">تنظیمات</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <div class="side-player" id="side-player" aria-live="polite"></div>
+      <button type="button" class="nav__item sidebar__toggle" data-sidebar-toggle aria-label="جمع کردن منو"><svg class="ico"><use href="#i-panel"/></svg><span class="nav__label sidebar__toggle-label">جمع کردن منو</span></button>
+    </div>
+  </aside>
+  <div class="scrim" data-drawer-close></div>
+  <div class="app__main">
+    <header class="topbar">
+      <a class="brand brand--top" href="#/" aria-label="خانه"><span class="brand__mark"><img src="assets/img/logo.svg" alt="" width="40" height="40"></span></a>
+      <h2 class="topbar__title" id="topbar-title">خانه</h2>
+      <div class="topbar__actions">
+        <span id="xp-pill" class="xp-pill" aria-live="polite"></span>
+        <button type="button" class="btn btn--ghost btn--icon" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false"><svg class="ico theme-ico-sun"><use href="#i-sun"/></svg><svg class="ico theme-ico-moon"><use href="#i-moon"/></svg></button>
+      </div>
+    </header>
+    <main class="page" id="app" tabindex="-1"></main>
+    <footer class="foot"><span>© ۱۴۰۵ AIhub Tools · همهٔ حقوق محفوظ است</span><a href="#/about">درباره و پشتیبانی · <span class="en">@aihub_tools</span></a></footer>
+  </div>
+</div>
+<nav class="bottomnav" aria-label="ناوبری موبایل">
+  <a data-nav="" href="#/"><span class="ico-wrap"><svg class="ico"><use href="#i-home"/></svg></span>خانه</a>
+  <a data-nav="map" href="#/map"><span class="ico-wrap"><svg class="ico"><use href="#i-map"/></svg></span>مسیر</a>
+  <a data-nav="labs" href="#/labs"><span class="ico-wrap"><svg class="ico"><use href="#i-flask"/></svg></span>آزمایشگاه</a>
+  <a data-nav="achievements" href="#/achievements"><span class="ico-wrap"><svg class="ico"><use href="#i-trophy"/></svg></span>دستاوردها</a>
+  <button type="button" data-drawer-open aria-expanded="false" aria-controls="sidebar"><span class="ico-wrap"><svg class="ico"><use href="#i-menu"/></svg></span>بیشتر</button>
+</nav>
+<div id="modal" class="modal" hidden></div>
+<noscript><p style="padding:2rem">برای استفاده از این برنامه باید جاوااسکریپت فعال باشد.</p></noscript>
+<script defer src="js/vendor/aihub-core.js"></script>
+<script defer src="js/config.js"></script>
+<script defer src="js/core/util.js"></script>
+<script defer src="js/core/storage.js"></script>
+<script defer src="content/ch1.js"></script><script defer src="content/ch2.js"></script><script defer src="content/ch3.js"></script><script defer src="content/ch4.js"></script><script defer src="content/ch6.js"></script>
+<script defer src="content/parents.js"></script><script defer src="content/family.js"></script><script defer src="content/quizzes.js"></script><script defer src="content/activities.js"></script><script defer src="content/sim.js"></script><script defer src="content/ch7.js"></script><script defer src="content/ch8.js"></script>
+<script defer src="js/logic/knn.js"></script>
+<script defer src="js/logic/progress.js"></script>
+<script defer src="js/core/license.js"></script>
+<script defer src="js/ui/icons.js"></script><script defer src="js/ui/enhance.js"></script><script defer src="js/ui/engines.js"></script><script defer src="js/ui/poster.js"></script><script defer src="js/ui/views.js"></script><script defer src="js/ui/labs.js"></script><script defer src="js/ui/studio.js"></script><script defer src="js/ui/activate.js"></script><script defer src="js/ui/router.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>

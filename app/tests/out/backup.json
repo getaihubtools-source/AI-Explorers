@@ -1,0 +1,1132 @@
+{
+  "app": "aihub-ai-explorers",
+  "exportedAt": "2026-11-13T08:39:58.368Z",
+  "data": {
+    "version": 1,
+    "profile": {
+      "nick": "",
+      "ageGroup": "",
+      "open": false,
+      "fontScale": 1,
+      "light": null,
+      "lastBackup": "",
+      "backupSnooze": ""
+    },
+    "xp": 85,
+    "awards": {
+      "read:c1d1": 10,
+      "quiz:c1d1": 30,
+      "ch:c1d1:2": 25,
+      "day:c1d1": 20
+    },
+    "days": {
+      "c1P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c7P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c8P": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c1d1": {
+        "read": true,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 3,
+          "total": 3,
+          "attempts": 2,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {
+          "1": "کوتاه",
+          "2": "ویرایش جدید برای همین چالش که طولانی است و دوباره ثبت می‌شود."
+        },
+        "chDone": {
+          "2": true
+        },
+        "reflect": {},
+        "prog": {},
+        "done": true,
+        "doneAt": "2026-11-13T08:39:56.930Z",
+        "stars": 2
+      },
+      "c1d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c1d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c1d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c1d5": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c1d6": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d5": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d6": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c2d7": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d5": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d6": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d7": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c3d8": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d5": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d6": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c4d7": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d5": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d6": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c6d7": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c7d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c7d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c7d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c7d4": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c8d1": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c8d2": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      },
+      "c8d3": {
+        "read": false,
+        "explore": false,
+        "practice": false,
+        "quiz": {
+          "best": 0,
+          "total": 0,
+          "attempts": 0,
+          "perfectFirst": false
+        },
+        "act": {
+          "done": false,
+          "best": 0
+        },
+        "ch": {},
+        "chDone": {},
+        "reflect": {},
+        "prog": {},
+        "done": false,
+        "doneAt": null,
+        "stars": 0
+      }
+    },
+    "notes": {},
+    "badges": {
+      "first_day": "2026-11-13T08:39:56.932Z"
+    },
+    "activity": [
+      "2026-11-13"
+    ],
+    "projects": {},
+    "family": {
+      "rules": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "parent": "",
+      "child": "",
+      "done": false,
+      "doneAt": null
+    }
+  }
+}

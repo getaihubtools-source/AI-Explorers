@@ -1,0 +1,7 @@
+tests/out/
+__pycache__/
+
+# هرگز در مخزن عمومی نگذار
+keygen*.html
+codes*.csv
+codes*.txt

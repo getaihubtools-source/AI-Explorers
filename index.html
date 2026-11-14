@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4F7F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1220" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="app/assets/img/logo.svg">
+<link rel="apple-touch-icon" href="app/assets/img/apple-touch-icon.png">
+<title>AIhub AI Explorers | آکادمی کاوشگران هوش مصنوعی برای ۱۱ تا ۱۳ سال</title>
+<meta name="description" content="آکادمی تعاملی فارسی هوش مصنوعی برای نوجوانان ۱۱ تا ۱۳ سال: ۴۲ درس، ۷ پروژه، آزمون و نشان. بدون حساب کاربری و ردیابی.">
+<style>@font-face{font-family:"Vazirmatn";font-weight:100 900;font-display:swap;src:url("app/assets/fonts/Vazirmatn-VF.woff2") format("woff2"),local("Vazirmatn")}</style>
+<style>
+:root{--bg:#F4F7F9;--mid:#E8EEF2;--ink:#0F1B2A;--muted:#4A5B6D;--line:rgba(15,27,42,.13);--card:rgba(255,255,255,.94);--blue:#2563EB;--cyan:#0A7F7C;--violet:#4F46E5;--yellow:#B87A00;--green:#1E9E6A;--orange:#E8892B;--purple:#C2415D;--btn-ink:#2B1D00;--glow:rgba(10,127,124,.16);--cta1:#FFC857;--cta2:#F5A623;
+--font:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;--en:"Inter","Segoe UI",sans-serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1220;--mid:#101B2E;--ink:#EAF2F7;--muted:#A3B4C6;--line:rgba(255,255,255,.14);--card:rgba(16,27,46,.85);--cyan:#2CC5BF;--violet:#8B87FF;--yellow:#FFC857;--green:#3DD598;--purple:#F0708A;--glow:rgba(44,197,191,.2);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A1220;--mid:#101B2E;--ink:#EAF2F7;--muted:#A3B4C6;--line:rgba(255,255,255,.14);--card:rgba(16,27,46,.85);--cyan:#2CC5BF;--violet:#8B87FF;--yellow:#FFC857;--green:#3DD598;--purple:#F0708A;--glow:rgba(44,197,191,.2);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.9;font-size:1rem;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+.en{font-family:var(--en);direction:ltr;unicode-bidi:isolate}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:64px}
+.brand{font-weight:800;display:flex;align-items:center;gap:10px}.brand b{font-family:var(--en);letter-spacing:.04em}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(24,215,232,.25)}
+nav{display:flex;gap:6px;margin-inline-start:auto}nav a{padding:6px 12px;border-radius:99px;color:var(--muted);font-size:.92rem}nav a:hover{color:var(--ink);background:var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:14px;font-weight:800;border:1px solid transparent;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn.p{background:var(--cta1);background:linear-gradient(135deg,var(--cta1),var(--cta2));color:var(--btn-ink);box-shadow:0 4px 0 #B87A00}
+.btn.g{border-color:var(--line);background:var(--card)}.btn:hover{transform:translateY(-2px)}
+.btn.sm{min-height:40px;padding:0 18px;font-size:.92rem}
+section{padding:84px 0}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.45;font-weight:800}
+h2{font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.5;font-weight:800;margin-bottom:12px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:62ch}
+.hero{padding:56px 0 72px;background:radial-gradient(circle at 85% 20%,var(--glow),transparent 45%),radial-gradient(circle at 10% 90%,rgba(24,215,232,.14),transparent 40%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{color:var(--cyan);font-weight:700;margin-bottom:14px}
+.hero .lead{margin:18px 0 28px}.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:.95rem}.facts b{color:var(--ink)}
+.bot{position:relative;justify-self:center;width:min(340px,80%)}
+.bot svg{width:100%;height:auto;display:block;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.bubble{position:absolute;inset-inline-end:-6%;top:6%;background:var(--card);border:1px solid var(--line);border-radius:16px 16px 4px 16px;padding:10px 14px;font-size:.88rem;max-width:180px;backdrop-filter:blur(6px)}
+.trust{border-block:1px solid var(--line);background:var(--mid);padding:18px 0}
+.trust ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;color:var(--muted);font-size:.95rem}
+.trust li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-inline-end:8px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.why p+p{margin-top:14px;color:var(--muted)}
+.rules{display:grid;gap:14px}.rules div{border-inline-start:3px solid var(--cyan);padding:4px 16px;background:linear-gradient(90deg,transparent,var(--line))}.rules b{display:block}
+.route{margin-top:36px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;inset-block:12px;inset-inline-start:27px;width:2px;background:linear-gradient(var(--cyan),var(--violet),var(--yellow))}
+.stop{position:relative;display:grid;grid-template-columns:56px 1fr;gap:18px}
+.dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.3rem;background:var(--bg);border:2px solid var(--c);color:var(--c);z-index:1}
+.stop .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px;display:grid;grid-template-columns:1.2fr 1fr;gap:6px 24px}
+.stop h3{font-size:1.1rem}.stop small{color:var(--muted)}
+.stop .out{font-size:.92rem;color:var(--muted)}.stop .out b{color:var(--c)}
+.stop.fam .box{border-style:dashed}
+.day{background:var(--mid)}
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:32px}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center}
+.steps b{display:block;margin-bottom:2px}.steps span{color:var(--yellow);font-size:.85rem;font-weight:700}
+.note{margin-top:18px;color:var(--muted);font-size:.95rem}
+.lv{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.lv span{padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:.92rem}
+.lv span:nth-child(7){border-color:var(--yellow);color:var(--yellow)}
+.btn{box-shadow:none}.btn.g{box-shadow:0 3px 0 var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+.panel{border:1px solid var(--line);border-radius:20px;padding:26px;background:var(--card)}
+.panel h3{margin-bottom:10px;font-size:1.15rem}.panel li{margin-inline-start:20px;margin-bottom:8px}.panel li::marker{color:var(--cyan)}
+.panel.k{background:linear-gradient(160deg,rgba(124,77,255,.22),var(--card))}
+.faq{max-width:780px;margin-top:28px}
+details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--cyan);font-size:1.3rem}details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px}
+.end{text-align:center;background:radial-gradient(circle at 50% 120%,var(--glow),transparent 60%)}
+.end .lead{margin:12px auto 26px}.end .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ft{display:grid!important;gap:16px}.ft-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.ft-top p{margin-top:2px}.ft-links{display:flex;gap:8px;flex-wrap:wrap}.ft-copy{border-top:1px solid var(--line);padding-top:14px;font-size:.85rem}.brand img{box-shadow:0 2px 8px rgba(0,0,0,.18)}
+dialog{margin:auto;max-width:min(440px,100% - 32px);border:1px solid var(--line);border-radius:20px;background:var(--mid);color:var(--ink);padding:26px}
+dialog::backdrop{background:rgba(5,8,18,.7)}dialog h3{margin-bottom:8px}dialog p{color:var(--muted);margin-bottom:18px}
+@media (max-width:860px){nav{display:none}.hero .wrap,.why,.split{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.stop .box{grid-template-columns:1fr}.bubble{inset-inline-end:0}.bar .btn{margin-inline-start:auto}section{padding:60px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="#top"><img src="app/assets/img/logo.svg" alt="" width="36" height="36" style="border-radius:11px"><span><b>AI</b> Explorers</span></a>
+<nav aria-label="ناوبری"><a href="#path">مسیر یادگیری</a><a href="#day">یک روز کاوشگری</a><a href="#parents">والدین</a><a href="#faq">پرسش‌ها</a></nav>
+<button type="button" class="btn p sm" data-install>نصب برنامه</button></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<p class="tag">آکادمی کاوشگران هوش مصنوعی برای ۱۱ تا ۱۳ سال</p>
+<h1>هوش مصنوعی را فقط استفاده نکن؛ بشناس، بررسی کن و با آن بساز.</h1>
+<p class="lead">یک مسیر تعاملی و فارسی با درس، تمرین، آزمون و پروژه. نوجوان یاد می‌گیرد سؤال خوب بپرسد، جواب را بسنجد و حریم خصوصی‌اش را نگه دارد. تصمیم آخر همیشه با خودش است.</p>
+<div class="cta"><button type="button" class="btn p" data-install>نصب برنامه</button><a class="btn g" data-web href="app/">بدون نصب، در مرورگر باز کن</a></div>
+<p class="facts"><span><b>۴۲</b> درس روزانه</span><span><b>۷</b> پروژهٔ فصل</span><span><b>۱۴۹</b> سؤال آزمون</span><span><b>۱۶</b> نشان</span></p>
+</div>
+<div class="bot"><svg role="img" aria-label="ربات کاوشگر" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="sh1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B7C6F2"/></linearGradient>
+<linearGradient id="bd1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A3B7A"/><stop offset="1" stop-color="#111A33"/></linearGradient>
+<linearGradient id="bp1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9B6CFF"/><stop offset="1" stop-color="#7C4DFF"/></linearGradient>
+<radialGradient id="gl1"><stop offset="0" stop-color="#18D7E8" stop-opacity=".5"/><stop offset="1" stop-color="#18D7E8" stop-opacity="0"/></radialGradient>
+<filter id="bl1"><feGaussianBlur stdDeviation="2.500"/></filter>
+</defs>
+<ellipse cx="120" cy="150" rx="118" ry="140" fill="url(#gl1)"/>
+<rect x="52" y="140" width="136" height="120" rx="34" fill="url(#bp1)"/>
+<rect x="68" y="236" width="104" height="14" rx="7" fill="#5B34D6"/>
+<rect x="72" y="132" width="96" height="112" rx="30" fill="url(#bd1)" stroke="#3478F6" stroke-width="2"/>
+<path d="M72 150 L100 238 M168 150 L140 238" stroke="#FFD84D" stroke-width="7" stroke-linecap="round"/>
+<circle cx="120" cy="188" r="20" fill="#0B1020" stroke="#18D7E8" stroke-width="2"/>
+<g transform="translate(106 174) scale(1.170)" fill="none" stroke="#18D7E8" stroke-width="1.300"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.800" fill="#FFD84D" stroke="none"/></g>
+<rect x="38" y="150" width="30" height="76" rx="15" fill="url(#bd1)" stroke="#3478F6" stroke-width="2"/>
+<rect x="172" y="150" width="30" height="76" rx="15" fill="url(#bd1)" stroke="#3478F6" stroke-width="2"/>
+<rect x="38" y="196" width="30" height="12" rx="6" fill="#FF9F43"/><rect x="172" y="196" width="30" height="12" rx="6" fill="#FF9F43"/>
+<rect x="84" y="244" width="30" height="40" rx="12" fill="url(#bd1)" stroke="#3478F6" stroke-width="2"/>
+<rect x="126" y="244" width="30" height="40" rx="12" fill="url(#bd1)" stroke="#3478F6" stroke-width="2"/>
+<line x1="120" y1="12" x2="120" y2="36" stroke="#B7C6F2" stroke-width="4" stroke-linecap="round"/>
+<circle cx="120" cy="10" r="7" fill="#18D7E8"/><circle cx="120" cy="10" r="12" fill="#18D7E8" opacity=".25"/>
+<rect x="26" y="68" width="22" height="40" rx="10" fill="#7C4DFF"/><rect x="192" y="68" width="22" height="40" rx="10" fill="#7C4DFF"/>
+<rect x="44" y="34" width="152" height="112" rx="42" fill="url(#sh1)"/>
+<rect x="58" y="58" width="124" height="68" rx="28" fill="#0B1020"/>
+<rect x="64" y="62" width="112" height="20" rx="10" fill="#fff" opacity=".07"/>
+<rect x="82" y="78" width="30" height="34" rx="14" fill="#18D7E8" filter="url(#bl1)" opacity=".7"/><rect x="128" y="78" width="30" height="34" rx="14" fill="#18D7E8" filter="url(#bl1)" opacity=".7"/>
+<rect x="84" y="80" width="26" height="30" rx="12" fill="#18D7E8"/><rect x="130" y="80" width="26" height="30" rx="12" fill="#18D7E8"/>
+<circle cx="93" cy="90" r="4.500" fill="#fff"/><circle cx="139" cy="90" r="4.500" fill="#fff"/>
+<path d="M104 118 Q120 127 136 118" stroke="#18D7E8" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M46 62 Q120 22 194 62" stroke="#FFD84D" stroke-width="9" fill="none" stroke-linecap="round"/>
+<circle cx="150" cy="40" r="15" fill="#0B1020" stroke="#FFD84D" stroke-width="5"/><circle cx="150" cy="40" r="8" fill="#18D7E8" opacity=".85"/>
+</svg><p class="bubble">امروز اول فکر می‌کنیم، بعد می‌پرسیم.</p></div>
+</div></section>
+
+<div class="trust"><div class="wrap"><ul><li>بدون حساب کاربری</li><li>برنامهٔ آموزشی بدون ردیابی و درخواست خارجی</li><li>پیشرفت فقط روی دستگاه خودتان</li><li>برنامه خودش به هیچ هوش مصنوعی وصل نیست</li></ul></div></div>
+
+<section id="why"><div class="wrap why">
+<div><h2>بچه‌ها پیش از آنکه یاد بگیرند، با هوش مصنوعی روبه‌رو می‌شوند.</h2>
+<p class="lead">این دوره به‌جای معرفی ابزارها، عادت‌های درست را می‌سازد.</p></div>
+<div class="rules">
+<div><b>فکر کن، بعد بپرس</b>جواب آماده جای فکر کردن را نمی‌گیرد.</div>
+<div><b>جواب را بسنج</b>هوش مصنوعی گاهی اشتباه می‌کند. کاوشگر منبع و شواهد را بررسی می‌کند.</div>
+<div><b>اطلاعات شخصی را نگه دار</b>نام کامل، رمز و اطلاعات خانوادگی وارد نمی‌شود.</div>
+<div><b>خودت بساز</b>در هر فصل یک پروژهٔ واقعی ساخته می‌شود.</div>
+<div class="stop" style="--c:var(--purple)"><span class="dot">۷</span><div class="box"><div><h3>دنیای جعلی و ابزارهای دوست‌نما</h3><small>۴ درس</small></div><p class="out">پروژه: پروندهٔ رسانهٔ امن<br>نشان: <b>کاوشگر رسانه‌شناس</b></p></div></div>
+</div></div></section>
+
+<section id="path" style="padding-top:0"><div class="wrap">
+<h2>هفت فصل درسی، آزمایشگاه و یک ایستگاه خانوادگی</h2>
+<p class="lead">هر روز بعد از کامل شدن روز قبل باز می‌شود. پروژهٔ فصل بعد از همهٔ درس‌های آن فصل باز می‌شود.</p>
+<div class="route">
+<div class="stop" style="--c:var(--cyan)"><span class="dot">۱</span><div class="box"><div><h3>ورود به دنیای هوش مصنوعی</h3><small>۶ درس</small></div><p class="out">پروژه: دفترچهٔ کاوشگری و دستیار ایمن<br>نشان: <b>کاوشگر هوش مصنوعی</b></p></div></div>
+<div class="stop" style="--c:var(--blue)"><span class="dot">۲</span><div class="box"><div><h3>تبدیل شدن به محقق کوچک</h3><small>۷ درس</small></div><p class="out">پروژه: پروندهٔ تحقیق یک کاوشگر<br>نشان: <b>محقق و کاوشگر اطلاعات</b></p></div></div>
+<div class="stop" style="--c:var(--violet)"><span class="dot">۳</span><div class="box"><div><h3>خلق کردن با هوش مصنوعی</h3><small>۸ درس</small></div><p class="out">پروژه: استودیوی خلاق کاوشگر<br>نشان: <b>کاوشگر خلاق هوش مصنوعی</b></p></div></div>
+<div class="stop" style="--c:var(--green)"><span class="dot">۴</span><div class="box"><div><h3>ساختن و ارائه دادن</h3><small>۷ درس</small></div><p class="out">پروژه: آزمایشگاه پروژهٔ کاوشگر<br>نشان: <b>کاوشگر سازندهٔ پروژه</b></p></div></div>
+<div class="stop fam" style="--c:var(--orange)"><span class="dot">۵</span><div class="box"><div><h3>ایستگاه خانواده</h3><small>ویژهٔ والدین، اجباری نیست</small></div><p class="out">توافق‌نامهٔ خانوادگی با هشت قانون<br>نشان: <b>خانوادهٔ کاوشگر</b></p></div></div>
+<div class="stop" style="--c:var(--yellow)"><span class="dot">۶</span><div class="box"><div><h3>جعبه‌ابزار کاوشگر</h3><small>۷ درس</small></div><p class="out">پروژه: جعبه‌ابزار شخصی من<br>نشان: <b>کاوشگر جعبه‌ابزار</b></p></div></div>
+</div></div></section>
+
+<section id="day" class="day"><div class="wrap">
+<h2>یک روز کاوشگری</h2>
+<p class="lead">هر روز یک ایدهٔ اصلی دارد و ۶ یا ۷ مرحله. درس را بخوان، با پرسش‌های آماده کاوش کن، تمرین کن و خودت را بسنج.</p>
+<div class="steps">
+<div><b>درس</b><span>۱۰ امتیاز</span></div><div><b>کاوش</b><span>۵ امتیاز</span></div><div><b>تمرین</b><span>۱۰ امتیاز</span></div><div><b>آزمون</b><span>تا ۳۰ امتیاز</span></div><div><b>بازی</b><span>۲۰ امتیاز</span></div><div><b>چالش</b><span>۱۵ تا ۳۵ امتیاز</span></div><div><b>بازتاب</b><span>۱۰ امتیاز</span></div>
+</div>
+<p class="note">«بازی» در ۱۰ روز از دوره هست؛ بقیهٔ روزها ۶ مرحله دارند. روز با گذراندن آزمون، ثبت یک چالش و خواندن درس کامل می‌شود و ۲۰ امتیاز بونوس می‌دهد. هر روز تا ۳ ستاره دارد.</p>
+<div class="lv" aria-label="هفت سطح"><span>کاوشگر نوآموز</span><span>کاوشگر کنجکاو</span><span>محقق کوچک</span><span>خالق خلاق</span><span>سازندهٔ پروژه</span><span>استاد جعبه‌ابزار</span><span>کاوشگر ارشد</span></div>
+</div></section>
+
+<section id="parents"><div class="wrap">
+<h2>برای والدین و معلم‌ها</h2>
+<p class="lead">شما کنترل‌گر نیستید؛ همراه‌اید. فصل ۵ همین را آموزش می‌دهد.</p>
+<div class="split">
+<div class="panel k"><h3>ایمنی و شفافیت</h3><ul>
+<li>فقط اسم مستعار اختیاری و گروه سنی ذخیره می‌شود، نه سن دقیق.</li>
+<li>پرسش‌های بخش «کاوش» فقط کپی می‌شوند. برنامه خودش با هیچ هوش مصنوعی ارتباط ندارد.</li>
+<li>درس‌ها تأکید می‌کنند استفاده فقط با ابزار مجاز برای سن و با کمک بزرگسال باشد.</li>
+<li>در استودیوی پوستر، متنی شبیه شمارهٔ تلفن، ایمیل یا لینک جلوی ساخت پوستر را می‌گیرد.</li></ul></div>
+<div class="panel"><h3>ابزارهای والد</h3><ul>
+<li>راهنمای والدین و واژه‌نامه در خود برنامه.</li>
+<li>توافق‌نامهٔ خانوادگی تعاملی با هشت قانون و دو اسم کوچک یا مستعار.</li>
+<li>حالت آزاد برای والد یا معلم که همهٔ مرحله‌ها را باز می‌کند.</li>
+<li>پشتیبان‌گیری JSON برای انتقال پیشرفت به دستگاه دیگر.</li></ul></div>
+</div></div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<h2>پرسش‌های رایج</h2>
+<div class="faq">
+<details><summary>برای چه سنی مناسب است؟</summary><p>برای ۱۱ تا ۱۳ سال. متن‌ها ساده‌اند و هر روز یک ایدهٔ اصلی دارد. والدین می‌توانند کنار فرزند باشند.</p></details>
+<details><summary>آیا فرزندم باید از ChatGPT یا ابزار دیگر استفاده کند؟</summary><p>برنامه هیچ ابزاری را اجباری نمی‌کند. پرسش‌های کاوش فقط کپی می‌شوند. اگر خانواده ابزاری را انتخاب کند، باید شرایط سنی رسمی همان ابزار را بررسی کنید و استفاده با کمک بزرگسال باشد.</p></details>
+<details><summary>اگر ChatGPT یا ابزار دیگری در دسترس نباشد چه؟</summary><p>برنامه به هیچ ابزار بیرونی وابسته نیست. بخش «آزمایشگاه‌ها» شامل آموزش یک مدل ساده، فید پیشنهادی و هفت شبیه‌ساز گفت‌وگوی ساختگی (با برچسب روشن) است که بدون اینترنت و بدون هوش مصنوعی واقعی کار می‌کنند. آزمایشگاه «آموزش مدل» در نسخهٔ فروش هم رایگان است.</p></details>
+<details><summary>به اینترنت نیاز دارد؟</summary><p>برنامه بدون سرور و بدون اتصال به هوش مصنوعی کار می‌کند. حالت آفلاین کامل فقط وقتی فعال است که برنامه از آدرس http یا https باز شود.</p></details>
+<details><summary>پیشرفت کجا ذخیره می‌شود؟</summary><p>فقط روی همان دستگاه و مرورگر. برای انتقال به دستگاه دیگر از پشتیبان JSON در تنظیمات استفاده کنید.</p></details>
+<details><summary>پاسخ‌های نوشتاری نمره می‌گیرند؟</summary><p>نه. برای چالش، بازتاب و تمرین‌ها فقط حداقل طول بررسی می‌شود. آزمون‌ها و بازی‌ها خودکار تصحیح می‌شوند.</p></details>
+</div></div></section>
+
+<section class="end"><div class="wrap">
+<h2>یاد بگیر. کشف کن. بساز.</h2>
+<p class="lead">با اولین درس شروع کنید. پیشرفت، ستاره‌ها و نشان‌ها از همان روز اول ثبت می‌شوند.</p>
+<div class="cta"><button type="button" class="btn p" data-install>نصب برنامه</button><a class="btn g" href="#path">دیدن مسیر</a></div>
+</div></section>
+</main>
+<footer id="contact"><div class="wrap ft">
+<div class="ft-top"><div><b>ارتباط با ما و پشتیبانی</b><p>در هر سه پلتفرم با آیدی <span class="en">@aihub_tools</span> پیام بدهید.</p></div>
+<div class="ft-links"><a class="btn g sm" href="https://rubika.ir/aihub_tools" target="_blank" rel="noopener noreferrer">روبیکا</a><a class="btn g sm" href="https://t.me/aihub_tools" target="_blank" rel="noopener noreferrer">تلگرام</a><a class="btn g sm" href="https://instagram.com/aihub_tools" target="_blank" rel="noopener noreferrer">اینستاگرام</a></div></div>
+<p class="ft-copy">© ۱۴۰۵ <b class="en">AIhub Tools</b> · همهٔ حقوق این برنامه، محتوا و طراحی محفوظ است. کپی، بازنشر و فروش مجدد بدون اجازهٔ کتبی ممنوع است.</p>
+</div></footer>
+<dialog id="help" aria-labelledby="ht"><h3 id="ht">نصب برنامه</h3><p id="hp"></p><form method="dialog" style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn p sm">متوجه شدم</button><a class="btn g sm" href="app/">ورود بدون نصب</a></form></dialog>
+<script>
+(function(){
+var KEY="aix-installed",dp=null,$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var standalone=function(){return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true};
+var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+function flag(v){try{if(v===undefined)return localStorage.getItem(KEY)==="1";v?localStorage.setItem(KEY,"1"):localStorage.removeItem(KEY)}catch(e){return false}}
+function render(){var on=standalone()||flag();
+$("[data-install]").forEach(function(b){b.textContent=on?"ورود به آکادمی":"نصب برنامه";b.dataset.state=on?"enter":"install"});
+$("[data-web]").forEach(function(a){a.hidden=on})}
+window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();dp=e;flag(false);render()});
+window.addEventListener("appinstalled",function(){dp=null;flag(true);render()});
+$("[data-install]").forEach(function(b){b.addEventListener("click",function(){
+if(b.dataset.state==="enter"){location.href="app/";return}
+if(dp){dp.prompt();dp.userChoice.then(function(r){if(r.outcome==="accepted"){flag(true);dp=null;render()}});return}
+document.getElementById("hp").textContent=ios?"در Safari دکمهٔ اشتراک‌گذاری را بزنید و گزینهٔ Add to Home Screen را انتخاب کنید. بعد از نصب، آیکن آکادمی روی صفحهٔ اصلی گوشی می‌آید.":"از منوی مرورگر گزینهٔ Install app یا Add to Home screen را بزنید. اگر این گزینه را نمی‌بینید، آدرس را با Chrome یا Edge باز کنید یا بدون نصب وارد شوید.";
+var d=document.getElementById("help");d.showModal?d.showModal():location.href="app/"})});
+if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(function(){});
+render();
+})();
+</script>
+</body>
+</html>

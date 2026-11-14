@@ -1,0 +1,45 @@
+{
+  "name": "AIhub AI Explorers - آکادمی کاوشگران هوش مصنوعی",
+  "short_name": "AI Explorers",
+  "description": "آکادمی تعاملی و بازی‌وار فارسی هوش مصنوعی برای نوجوانان ۱۱ تا ۱۳ سال",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./app/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F7F9",
+  "theme_color": "#0A7F7C",
+  "icons": [
+    {
+      "src": "app/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "app/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "app/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "app/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "./app/",
+  "categories": [
+    "education",
+    "kids"
+  ],
+  "orientation": "any",
+  "prefer_related_applications": false
+}
