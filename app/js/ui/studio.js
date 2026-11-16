@@ -109,7 +109,7 @@
   V.labs = function (root) {
     base(root);
     root.appendChild(h("h2", { class: "sec" }, "استودیوی خلاق"));
-    var g = h("div", { class: "grid" });
+    var g = h("div", { class: "grid wide" });
     g.appendChild(h("a", { class: "card link big-card", href: "#/labs/prompt" }, h("span", { html: AIX.ic("pen", 32) }), h("div", null, h("h3", null, "سازندهٔ پرامپت تصویر"), h("p", null, "موضوع، سبک، نور و زاویه را بچین و پرامپت دقیق بساز."), xpNote("prompt"))));
     g.appendChild(h("a", { class: "card link big-card", href: "#/labs/story" }, h("span", { html: AIX.ic("loop", 32) }), h("div", null, h("h3", null, "استوری‌بورد شش‌قابی"), h("p", null, "قبل از انیمیشن، شش قاب را طراحی کن و به‌صورت PNG بگیر."), xpNote("story"))));
     root.appendChild(g);

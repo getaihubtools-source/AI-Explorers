@@ -59,7 +59,7 @@
 
   function familyStation() {
     var f = P().family(), r = P().familyReady();
-    return h("a", { class: "card family-station", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 22) }), h("div", { class: "f1" }, h("strong", null, "فصل ۵ · ایستگاه خانواده (ویژهٔ والدین)"), h("p", { class: "muted" }, f.done ? "توافق‌نامهٔ خانوادگی امضا شد." : "توافق‌نامهٔ خانوادگی را با والدت بساز. اجباری نیست، ولی قبل از فصل ۶ پیشنهاد می‌شود. " + u.fa(r.rules) + " از " + u.fa(r.total) + " قانون پذیرفته شده.")), h("span", { class: "chip " + (f.done ? "ok" : "") }, f.done ? "کامل" : "باز"));
+    return h("a", { class: "card family-station", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 22) }), h("div", { class: "f1" }, h("strong", null, "فصل ۵ · ایستگاه خانواده (ویژهٔ والدین)"), h("p", { class: "muted" }, f.done ? "توافق‌نامهٔ خانوادگی امضا شد." : "توافق‌نامهٔ خانوادگی را با والدینت بساز. اجباری نیست، ولی قبل از فصل ۶ پیشنهاد می‌شود. " + u.fa(r.rules) + " از " + u.fa(r.total) + " قانون پذیرفته شده.")), h("span", { class: "chip " + (f.done ? "ok" : "") }, f.done ? "کامل" : "باز"));
   }
 
   // ---------- فصل ----------
@@ -106,7 +106,7 @@
     var nextBtn = function (label, fn) { return h("button", { type: "button", class: "btn primary", onclick: function () { if (fn) fn(); if (nextKey) go("#/lesson/" + id + "/" + nextKey); else go("#/chapter/" + ch.n); } }, label); };
     var prefix = id + ":" + step;
     if (step === "learn") {
-      if (id === "c6d1" && !AIX.progress.family().done) body.appendChild(h("a", { class: "card family-remind", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 20) }), h("div", null, h("strong", null, "یادآوری قبل از شروع"), h("p", null, "اگر هنوز توافق‌نامهٔ خانوادگی فصل ۵ را با والدت امضا نکرده‌ای، اول آن را انجام بده. اجباری نیست. برای رفتن به ایستگاه خانواده بزن."))));
+      if (id === "c6d1" && !AIX.progress.family().done) body.appendChild(h("a", { class: "card family-remind", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 20) }), h("div", null, h("strong", null, "یادآوری قبل از شروع"), h("p", null, "اگر هنوز توافق‌نامهٔ خانوادگی فصل ۵ را با والدینت امضا نکرده‌ای، اول آن را انجام بده. اجباری نیست. برای رفتن به ایستگاه خانواده بزن."))));
       body.appendChild(h("div", { class: "card dk mission" }, h("div", { class: "ch" }, h("span", { class: "ibox", html: AIX.ic("flag", 18) }), h("h3", null, "مأموریت")), h("p", null, L.mission)));
       body.appendChild(AIX.enhance(html("content", sectionsHtml(L, GROUPS.learn)), prefix));
       if (L.tip) body.appendChild(h("div", { class: "card ac tip" }, h("strong", null, "نکتهٔ کاوشگر: "), L.tip));
@@ -114,7 +114,7 @@
     } else if (step === "explore") {
       body.appendChild(AIX.enhance(html("content", sectionsHtml(L, GROUPS.explore)), prefix));
       AIX.simsFor(id).forEach(function (sid) { var S = AIX.sims[sid]; body.appendChild(h("a", { class: "card link sim-link", href: "#/labs/sim/" + sid }, h("span", { html: AIX.ic("chat", 24) }), h("div", null, h("strong", null, "بدون ابزار هم می‌شود: شبیه‌ساز آفلاین"), h("p", null, S.title + " · گفت‌وگوی ساختگی برای تمرین همین مهارت")))); });
-      body.appendChild(h("p", { class: "note" }, "این برنامه به هیچ هوش مصنوعی وصل نیست. پرسش‌ها را برای استفاده در یک ابزار مجاز و با کمک بزرگسال کپی می‌کنی. اگر ابزار نداری، همین کار را روی کاغذ و با معلم یا والد انجام بده."));
+      body.appendChild(h("p", { class: "note" }, "این برنامه به هیچ هوش مصنوعی وصل نیست. پرسش‌ها را برای استفاده در یک ابزار مجاز و با کمک بزرگسال کپی می‌کنی. اگر ابزار نداری، همین کار را روی کاغذ و با معلم یا والدین انجام بده."));
       body.appendChild(nextBtn("کاوش کردم؛ ادامه", function () { P().markExplore(id); }));
     } else if (step === "practice") {
       var wrote = false;
@@ -186,16 +186,16 @@
     var btn = h("button", { type: "button", class: "btn primary", disabled: d.done || !(r.quiz && r.notes) }, d.done ? "انجام شد" : "پروژه را تمام کن");
     btn.addEventListener("click", function () { if (P().completeProject(c.n)) AIX.router.render(); });
     fin.appendChild(btn); root.appendChild(fin);
-    var ps = h("div", { class: "card parent-seen" }, h("h3", null, "تأیید والد یا معلم (اختیاری)"), h("p", { class: "muted" }, "پروندهٔ پروژه را به یک بزرگسال نشان بده و از او بخواه نظرش را بگوید. وقتی دید، این دکمه را بزن. " + u.fa(P().XP.parentSeen) + " امتیاز یک‌باره."));
-    var pb = h("button", { type: "button", class: "btn", disabled: P().parentSeen(c.n) }, P().parentSeen(c.n) ? "تأیید شد" : "والد یا معلم پروندهٔ مرا دید");
-    pb.addEventListener("click", function () { if (!confirm("آیا واقعاً پروندهٔ پروژه را به والد یا معلم نشان داده‌ای؟")) return; P().markParentSeen(c.n); u.toast("آفرین! " + u.fa(P().XP.parentSeen) + " امتیاز گرفتی.", "ok"); AIX.router.render(); });
+    var ps = h("div", { class: "card parent-seen" }, h("h3", null, "تأیید والدین یا معلم (اختیاری)"), h("p", { class: "muted" }, "پروندهٔ پروژه را به یک بزرگسال نشان بده و از او بخواه نظرش را بگوید. وقتی دید، این دکمه را بزن. " + u.fa(P().XP.parentSeen) + " امتیاز یک‌باره."));
+    var pb = h("button", { type: "button", class: "btn", disabled: P().parentSeen(c.n) }, P().parentSeen(c.n) ? "تأیید شد" : "والدین یا معلم پروندهٔ مرا دید");
+    pb.addEventListener("click", function () { if (!confirm("آیا واقعاً پروندهٔ پروژه را به والدین یا معلم نشان داده‌ای؟")) return; P().markParentSeen(c.n); u.toast("آفرین! " + u.fa(P().XP.parentSeen) + " امتیاز گرفتی.", "ok"); AIX.router.render(); });
     ps.appendChild(pb); root.appendChild(ps);
   };
 
   // ---------- کارگاه ----------
   V.lab = function (root) {
     u.clear(root); root.appendChild(page("کارگاه پروژه‌های خلاقانه", "اینجا چیزهایی می‌سازی که مال خودت است. هر خروجی شفافیت دربارهٔ نقش هوش مصنوعی دارد."));
-    var g = h("div", { class: "grid" });
+    var g = h("div", { class: "grid lab-grid" });
     var pd = AIX.store.get().projects.poster;
     g.appendChild(h("a", { class: "card link big-card", href: "#/lab/poster" }, h("span", { html: AIX.ic("pen", 32) }), h("div", null, h("h3", null, "استودیوی پوستر علمی"), h("p", null, "عنوان، شعار و سه حقیقت بررسی‌شده را بنویس، رنگ و نماد را انتخاب کن و پوستر PNG بگیر."), pd && pd.exported ? h("span", { class: "chip ok" }, "یک بار خروجی گرفته‌ای") : (pd && pd.title ? h("span", { class: "chip" }, "پیش‌نویس ذخیره شده") : null))));
     P().course().forEach(function (c) { var ok = P().projectUnlocked(c.n); g.appendChild(h(ok ? "a" : "div", { class: "card link" + (ok ? "" : " locked"), href: ok ? "#/project/" + c.n : null }, h("span", { html: AIX.ic(ok ? "flag" : "lock", 24) }), h("div", null, h("h3", null, c.projectTitle), h("p", { class: "muted" }, "پروندهٔ پروژهٔ فصل " + u.fa(c.n) + (ok ? "" : " (بعد از کامل کردن درس‌ها باز می‌شود)"))))); });
@@ -225,10 +225,10 @@
     root.appendChild(appearanceCard());
     var fs = h("input", { type: "range", min: 0.9, max: 1.3, step: 0.05, value: st.profile.fontScale, "aria-label": "اندازهٔ نوشته" }); fs.addEventListener("input", function () { st.profile.fontScale = Number(fs.value); document.documentElement.style.setProperty("--fs", fs.value); AIX.store.save(); });
     var open = h("input", { type: "checkbox" }); open.checked = !!st.profile.open;
-    open.addEventListener("change", function () { if (open.checked && !confirm("حالت آزاد همهٔ مرحله‌ها را باز می‌کند. این حالت برای والد یا معلم است. فعال شود؟")) { open.checked = false; return; } st.profile.open = open.checked; AIX.store.save(true); u.toast(open.checked ? "حالت آزاد فعال شد." : "حالت آزاد خاموش شد."); });
+    open.addEventListener("change", function () { if (open.checked && !confirm("حالت آزاد همهٔ مرحله‌ها را باز می‌کند. این حالت برای والدین یا معلم است. فعال شود؟")) { open.checked = false; return; } st.profile.open = open.checked; AIX.store.save(true); u.toast(open.checked ? "حالت آزاد فعال شد." : "حالت آزاد خاموش شد."); });
     var lt = h("input", { type: "checkbox" }); lt.checked = P().lightMode();
     lt.addEventListener("change", function () { st.profile.light = lt.checked; AIX.store.save(true); u.toast(lt.checked ? "حالت سبک روشن شد." : "حالت سبک خاموش شد."); });
-    root.appendChild(h("section", { class: "card" }, h("h3", null, "نمایش و حالت‌ها"), h("label", { class: "field" }, h("span", null, "اندازهٔ نوشته"), fs), h("label", { class: "check" }, lt, " حالت سبک: فقط درس، آزمون و چالش (مناسب ۱۰ تا ۱۱ سال؛ برای این گروه خودکار روشن است)"), h("label", { class: "check" }, open, " حالت آزاد (برای والد یا معلم): همهٔ مرحله‌ها باز باشند")));
+    root.appendChild(h("section", { class: "card" }, h("h3", null, "نمایش و حالت‌ها"), h("label", { class: "field" }, h("span", null, "اندازهٔ نوشته"), fs), h("label", { class: "check" }, lt, " حالت سبک: فقط درس، آزمون و چالش (مناسب ۱۰ تا ۱۱ سال؛ برای این گروه خودکار روشن است)"), h("label", { class: "check" }, open, " حالت آزاد (برای والدین یا معلم): همهٔ مرحله‌ها باز باشند")));
     var file = h("input", { type: "file", accept: "application/json,.json", class: "sr-only", id: "restore-file" });
     file.addEventListener("change", function () {
       var f = file.files[0]; if (!f) return; var rd = new FileReader();
@@ -263,7 +263,7 @@
   }
   V.family = function (root) {
     var C = AIX.content.family, f = P().family(); u.clear(root); root.setAttribute("data-acc", ACC.green);
-    root.appendChild(page(C.title, "توافق‌نامهٔ خانوادگی هوش مصنوعی؛ کار مشترک تو و والدت."));
+    root.appendChild(page(C.title, "توافق‌نامهٔ خانوادگی هوش مصنوعی؛ کار مشترک تو و والدینت."));
     C.intro.forEach(function (t) { root.appendChild(h("p", { class: "lead" }, t)); });
     root.appendChild(h("div", { class: "row-actions" }, h("a", { class: "btn", href: "#/parents" }, "خواندن راهنمای والدین (فصل ۵)"), h("a", { class: "btn ghost", href: "#/map" }, "بازگشت به نقشه")));
     var status = h("div", { class: "card fam-status", "aria-live": "polite" });
@@ -275,7 +275,7 @@
       list.appendChild(h("label", { class: "check fam-rule", for: "famr" + i }, cb, h("span", null, h("strong", null, "قانون " + u.fa(i + 1) + " · " + r.h + ": "), r.t)));
     });
     function nameField(label, key, ph) { var i = h("input", { type: "text", maxlength: 20, value: f[key], placeholder: ph, "aria-label": label }); i.addEventListener("input", function () { P().setFamilyName(key, i.value); drawStatus(); }); return h("label", { class: "field" }, h("span", null, label), i); }
-    var sign = h("div", { class: "card" }, h("h3", null, "امضا"), h("div", { class: "g-two" }, nameField("اسم والد یا بزرگسال", "parent", "اسم کوچک یا اسم مستعار"), nameField("اسم کودک", "child", "اسم کوچک یا اسم مستعار")), h("small", { class: "muted" }, C.namesHint));
+    var sign = h("div", { class: "card" }, h("h3", null, "امضا"), h("div", { class: "g-two" }, nameField("اسم والدین یا بزرگسال", "parent", "اسم کوچک یا اسم مستعار"), nameField("اسم کودک", "child", "اسم کوچک یا اسم مستعار")), h("small", { class: "muted" }, C.namesHint));
     root.appendChild(status); root.appendChild(list); root.appendChild(sign);
     root.appendChild(h("div", { class: "card warn-box" }, h("strong", null, "ابزارها و سن"), h("p", null, C.safety)));
     drawStatus();
@@ -283,8 +283,8 @@
 
   // ---------- والدین و واژه‌نامه ----------
   V.parents = function (root) {
-    u.clear(root); root.appendChild(page("راهنمای والدین · فصل ۵", "همراهی هوشمندانه با نوجوان ۱۰ تا ۱۳ ساله. والد پلیس نیست؛ همراه، راهنما و مربی است."));
-    root.appendChild(h("a", { class: "card link", href: "#/family" }, h("span", { html: AIX.ic("users", 24) }), h("div", null, h("strong", null, "ایستگاه خانواده: توافق‌نامهٔ تعاملی"), h("p", null, "والد و کودک با هم قانون‌ها را می‌پذیرند و امضا می‌کنند."))));
+    u.clear(root); root.appendChild(page("راهنمای والدین · فصل ۵", "همراهی هوشمندانه با نوجوان ۱۰ تا ۱۳ ساله. والدین پلیس نیستند؛ همراه، راهنما و مربی است."));
+    root.appendChild(h("a", { class: "card link", href: "#/family" }, h("span", { html: AIX.ic("users", 24) }), h("div", null, h("strong", null, "ایستگاه خانواده: توافق‌نامهٔ تعاملی"), h("p", null, "والدین و کودک با هم قانون‌ها را می‌پذیرند و امضا می‌کنند."))));
     var c = AIX.content.parents || []; c.forEach(function (p, i) { root.appendChild(h("details", { class: "card acc", open: i === 0 ? true : null }, h("summary", null, p.title), AIX.enhance(html("content", p.html), "parents:p" + i))); });
   };
   V.about = function (root) {

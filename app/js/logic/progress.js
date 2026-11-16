@@ -121,7 +121,7 @@
     P.emit("celebrate", { kind: "project", id: id, chapter: n }); return true;
   };
 
-  // ---------- تأیید والد یا معلم (اختیاری، امتیاز یک‌باره) ----------
+  // ---------- تأیید والدین یا معلم (اختیاری، امتیاز یک‌باره) ----------
   P.parentSeen = function (n) { return !!S().day("c" + n + "P").parentSeen; };
   P.markParentSeen = function (n) { var d = S().day("c" + n + "P"); if (d.parentSeen) return 0; d.parentSeen = true; var x = P.addXp("parent:c" + n, XP.parentSeen); S().save(true); return x; };
   // ---------- آزمایشگاه‌ها و شبیه‌ساز (امتیاز یک‌باره برای هر کدام) ----------
@@ -181,7 +181,7 @@
       { id: "reflector", name: "اندیشمند", desc: "در پنج روز بازتاب بنویس.", icon: "bulb", ok: t.reflects >= 5 },
       { id: "streak3", name: "سه روز پیوسته", desc: "سه روز پشت‌سرهم درس بخوان.", icon: "loop", ok: P.streak() >= 3 },
       { id: "poster", name: "طراح پوستر", desc: "یک پوستر در کارگاه بساز و خروجی بگیر.", icon: "pen", ok: !!(st.projects.poster && st.projects.poster.exported) },
-      { id: "family", name: "خانوادهٔ کاوشگر", desc: "توافق‌نامهٔ خانوادگی فصل ۵ را با والد کامل کن.", icon: "users", ok: !!st.family.done },
+      { id: "family", name: "خانوادهٔ کاوشگر", desc: "توافق‌نامهٔ خانوادگی فصل ۵ را با والدین کامل کن.", icon: "users", ok: !!st.family.done },
       { id: "level5", name: "سطح ۵", desc: "به سطح پنج برس.", icon: "rocket", ok: P.level(st.xp).level >= 5 }
     ];
     P.course().forEach(function (c) { defs.push({ id: "chapter" + c.n, name: c.badge, desc: "پروژهٔ فصل " + AIX.u.fa(c.n) + " را کامل کن.", icon: "star", ok: P.isDone(c.projectId), chapter: c.n }); });

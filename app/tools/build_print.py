@@ -48,7 +48,7 @@ W.append('''<div class="page" style="text-align:center;padding-top:60pt">
 <div class="rule" style="margin:0 30pt">هوش مصنوعی پیشنهاد می‌دهد؛ انسان بررسی و تصمیم‌گیری می‌کند.</div></div>''')
 W.append('<div class="page"><div class="band"><h2>۱ · میثاق‌نامهٔ استفادهٔ مسئولانه از هوش مصنوعی</h2></div><p>پنج قانون زیر را بخوان. اگر قبولشان داری، امضا کن.</p>' +
  '<div class="box">' + "".join(f'<p><span class="cb"></span>{t}</p>' for t in ["اطلاعات شخصی خود و دیگران را بدون بررسی وارد هوش مصنوعی نمی‌کنم.", "از هوش مصنوعی برای یادگیری کمک می‌گیرم، نه برای کنار گذاشتن تلاش خودم.", "پاسخ‌های مهم هوش مصنوعی را بررسی می‌کنم.", "قوانین مدرسه، معلم و ابزار را رعایت می‌کنم.", "مسئولیت نهایی کار و تصمیم خودم را می‌پذیرم."]) + '</div>' +
- '<p>قانون خودم (یک قانون ششم):</p>' + lines(2) + '<table><tr><th>امضای من</th><th>امضای والد یا معلم</th><th>تاریخ</th></tr><tr><td class="w"></td><td class="w"></td><td class="w"></td></tr></table></div>')
+ '<p>قانون خودم (یک قانون ششم):</p>' + lines(2) + '<table><tr><th>امضای من</th><th>امضای والدین یا معلم</th><th>تاریخ</th></tr><tr><td class="w"></td><td class="w"></td><td class="w"></td></tr></table></div>')
 W.append('<div class="page"><div class="band"><h2>۲ · من در برابر هوش مصنوعی</h2></div><p>جدول را با مثال‌های خودت کامل کن.</p>' + tbl(["ویژگی", "انسان", "هوش مصنوعی"], [["احساس و تجربهٔ شخصی", "", ""], ["یادگیری", "", ""], ["سرعت", "", ""], ["مسئولیت تصمیم", "", ""], ["اشتباه کردن", "", ""]], 0).replace('<td></td><td></td>', '<td class="w"></td><td class="w"></td>') +
  '<h3>سه نمونه از هوش مصنوعی در زندگی روزمره</h3>' + tbl(["نمونه", "چه کاری می‌کند؟", "داده چه نقشی دارد؟", "تصمیم انسان کجاست؟"], [["", "", "", ""]] * 3).replace('<td></td>', '<td class="w"></td>') + '</div>')
 W.append('<div class="page"><div class="band"><h2>۳ · گزارش کارآگاه هوش مصنوعی</h2></div><p>یک ادعای هوش مصنوعی را انتخاب کن و بررسی کن. جواب هوش مصنوعی شروع بررسی است، نه آخر آن.</p><div class="box"><h3>ادعای هوش مصنوعی</h3>' + lines(2) + '<h3>منبعی که برای بررسی استفاده کردم</h3>' + lines(2) +
@@ -65,12 +65,12 @@ W.append('<div class="page"><div class="band"><h2>۶ · برچسب شفافیت<
  '<p class="sub">سطح ۰: بدون هوش مصنوعی · ۱: ایده و پیشنهاد · ۲: ویرایش و بهبود کار خودم · ۳: ساخت پیش‌نویس با هدایت من. برای تکلیف مدرسه، قانون معلم دربارهٔ اعلام استفاده از هوش مصنوعی را رعایت کن.</p></div>')
 W.append('<div class="page"><div class="band"><h2>۷ · ماتریس انتخاب ابزار و نقشهٔ جایگزین</h2></div>' +
  tbl(["نیاز من", "روش یا ابزار انتخابی", "چه چیزی را بررسی می‌کنم؟", "اگر ابزار نبود چه می‌کنم؟"], [["فهمیدن یک درس", "", "", ""], ["تحقیق علمی", "", "", ""], ["ساخت تصویر یا پوستر", "", "", ""], ["پادکست یا ویدئو (فقط نوشتن و برنامه‌ریزی)", "", "", ""], ["ارائهٔ پروژه", "", "", ""]]).replace('<td></td>', '<td class="w"></td>') +
- '<div class="box"><h3>چک‌لیست انتخاب ابزار</h3><p><span class="cb"></span>ابزار با هدف من هماهنگ است.</p><p><span class="cb"></span>شرایط سنی و قوانین را با والد بررسی کرده‌ام.</p><p><span class="cb"></span>اطلاعات شخصی غیرضروری وارد نمی‌کنم.</p><p><span class="cb"></span>می‌دانم چطور خروجی را بررسی کنم.</p><p><span class="cb"></span>اگر ابزار نبود، روش جایگزین دارم.</p></div></div>')
+ '<div class="box"><h3>چک‌لیست انتخاب ابزار</h3><p><span class="cb"></span>ابزار با هدف من هماهنگ است.</p><p><span class="cb"></span>شرایط سنی و قوانین را با والدین بررسی کرده‌ام.</p><p><span class="cb"></span>اطلاعات شخصی غیرضروری وارد نمی‌کنم.</p><p><span class="cb"></span>می‌دانم چطور خروجی را بررسی کنم.</p><p><span class="cb"></span>اگر ابزار نبود، روش جایگزین دارم.</p></div></div>')
 days = [("فصل ۱", 6), ("فصل ۲", 7), ("فصل ۳", 8), ("فصل ۴", 7), ("فصل ۶", 7), ("فصل ۷", 4)]
 trk = ""
 for name, n in days:
     trk += f'<h3>{name}</h3><div class="grid5">' + "".join(f'<div><span class="cb"></span>روز {i}</div>' for i in range(1, n + 1)) + '<div><span class="cb"></span>پروژه</div></div>'
-W.append('<div class="page"><div class="band"><h2>۸ · ردیاب مسیر</h2></div><p>هر روز که کامل شد، یک تیک بزن. هر روز حدود ۱۵ تا ۳۰ دقیقه کافی است.</p>' + trk + '<div class="box" style="margin-top:10pt"><p><b>ایستگاه خانواده (فصل ۵):</b> <span class="cb"></span>توافق‌نامه را با والد امضا کردم.</p></div></div>')
+W.append('<div class="page"><div class="band"><h2>۸ · ردیاب مسیر</h2></div><p>هر روز که کامل شد، یک تیک بزن. هر روز حدود ۱۵ تا ۳۰ دقیقه کافی است.</p>' + trk + '<div class="box" style="margin-top:10pt"><p><b>ایستگاه خانواده (فصل ۵):</b> <span class="cb"></span>توافق‌نامه را با والدین امضا کردم.</p></div></div>')
 (OUT / "_workbook.html").write_text(doc("".join(W)), encoding="utf-8")
 
 # ---------------- گواهی ----------------
@@ -80,11 +80,11 @@ CERT = '''<div style="border:5pt double #2a2f8f;border-radius:14pt;padding:28pt 
 <p style="font-size:14pt">برای تکمیل مسیر یادگیری زیر تقدیم می‌شود:</p>
 <p style="font-size:12pt;margin-top:6pt"><span class="cb"></span>فصل ۱ &nbsp; <span class="cb"></span>فصل ۲ &nbsp; <span class="cb"></span>فصل ۳ &nbsp; <span class="cb"></span>فصل ۴ &nbsp; <span class="cb"></span>فصل ۶ &nbsp; <span class="cb"></span>فصل ۷</p>
 <p style="margin-top:8pt;font-weight:700;color:#2a2f8f">فکر کن، بپرس، بسنج، اطلاعات شخصی‌ات را نگه دار، خودت بساز.</p></div>
-<div style="display:flex;justify-content:space-around;font-size:11pt"><div style="width:30%;border-top:1pt solid #555c7a;padding-top:4pt">امضای والد یا معلم</div><div style="width:30%;border-top:1pt solid #555c7a;padding-top:4pt">تاریخ</div></div>
+<div style="display:flex;justify-content:space-around;font-size:11pt"><div style="width:30%;border-top:1pt solid #555c7a;padding-top:4pt">امضای والدین یا معلم</div><div style="width:30%;border-top:1pt solid #555c7a;padding-top:4pt">تاریخ</div></div>
 <p class="sub" style="font-size:8.5pt">این گواهی تشویقی و خانگی است و مدرک رسمی آموزشی نیست.</p></div>'''
 (OUT / "_certificate.html").write_text(doc(CERT, "@page{size:A4 landscape;margin:12mm}"), encoding="utf-8")
 
-# ---------------- راهنمای والد ----------------
+# ---------------- راهنمای والدین ----------------
 PG = '''<div class="page"><div class="band"><h2>راهنمای یک‌صفحه‌ای والدین: همراه باشید، نه کنترل‌گر</h2></div>
 <h3>اصل طلایی</h3><div class="rule">هوش مصنوعی پیشنهاد می‌دهد؛ فرزند شما بررسی و تصمیم‌گیری می‌کند.</div>
 <h3>هر روز چه کنید (۵ دقیقه)</h3><ul><li>بپرسید: «امروز چه چیزی یاد گرفتی که قبلاً نمی‌دانستی؟»</li><li>بپرسید: «از کجا می‌دانی درست است؟» (به‌جای «جواب چی شد؟»)</li><li>چالش یا بازتاب او را بخوانید و یک نکتهٔ مثبت بگویید.</li></ul>

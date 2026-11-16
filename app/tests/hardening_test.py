@@ -36,9 +36,9 @@ with sync_playwright() as p:
     # آفلاین + کش SW
     c = br.new_context(); pg = c.new_page(); pg.goto(B + "/app/"); pg.wait_for_timeout(1500); pg.reload(); pg.wait_for_timeout(1000)
     n = pg.evaluate("caches.keys().then(k=>k.length?caches.open(k[0]).then(c=>c.keys()).then(x=>[k[0],x.length]):[null,0])")
-    check("همهٔ فایل‌ها در کش (نسخهٔ ۹، ۴۳ فایل)", n == ["aix-v9", 43], n)
+    check("همهٔ فایل‌ها در کش (نسخهٔ ۱۲، ۴۵ فایل)", n == ["aix-v12", 45], n)
     pg.evaluate("fetch('/app/nope-404.js?x=1').catch(()=>0)"); pg.wait_for_timeout(500)
-    hit = pg.evaluate("caches.open('aix-v9').then(c=>c.match('/app/nope-404.js?x=1')).then(r=>!!r)"); check("پاسخ ۴۰۴ در کش نمی‌ماند", not hit)
+    hit = pg.evaluate("caches.open('aix-v12').then(c=>c.match('/app/nope-404.js?x=1')).then(r=>!!r)"); check("پاسخ ۴۰۴ در کش نمی‌ماند", not hit)
     c.set_offline(True); pg.reload(); pg.wait_for_selector(".topbar", timeout=8000); pg.evaluate("location.hash='#/labs'"); pg.wait_for_timeout(400)
     check("آفلاین: برنامه و آزمایشگاه‌ها بالا می‌آیند", pg.locator(".topbar").count() == 1 and "آزمایشگاه" in pg.inner_text("main"))
     pg2 = c.new_page(); pg2.goto(B + "/app/?utm_source=twa"); pg2.wait_for_selector(".topbar", timeout=8000); check("آفلاین با query (راه‌اندازی TWA) باز می‌شود", pg2.locator(".topbar").count() == 1)

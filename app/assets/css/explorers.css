@@ -543,3 +543,71 @@ main .row select { flex: 1; width: auto; }
 .copyright b { color: var(--text); }
 
 .about-hero { margin-block-end: var(--sp-4); } #app[data-view=about] { max-width: 960px; } #app[data-view=about] section + section { margin-block-start: var(--sp-5); }
+
+
+/* ---------- شبکهٔ کارت‌ها: چیدمان ثابت و هم‌اندازه ---------- */
+.grid { gap: var(--sp-4); align-items: stretch; margin-block-end: var(--sp-5); }
+.grid.wide { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.grid > .card.link:not(.chap) { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: var(--sp-3); margin: 0; height: 100%; }
+.grid > .card.link:not(.chap) > div { display: flex; flex-direction: column; flex: 1 1 auto; width: 100%; min-width: 0; gap: var(--sp-2); }
+.grid > .card.link:not(.chap) h3, .grid > .card.link:not(.chap) strong { margin: 0; font-size: var(--fs-md); line-height: 1.5; }
+.grid > .card.link:not(.chap) > div > .chip { margin-block-start: auto; align-self: flex-start; }
+.grid > .card.link:not(.chap) > div > p { flex: 0 1 auto; }
+.grid > .card.link:not(.chap) > div > p + .chip, .grid > .card.link:not(.chap) > div > p ~ .chip { margin-block-start: var(--sp-2); }
+.grid > .card.link:not(.chap) { position: relative; }
+.grid > .card.link.locked { opacity: .65; }
+.lab-grid > .big-card { grid-column: 1 / -1; flex-direction: row; align-items: center; height: auto; }
+.lab-grid > .big-card > div { flex-direction: column; }
+.h2.sec, h2.sec { margin-block: var(--sp-6) var(--sp-3); }
+
+/* فضای خالی پایین صفحه‌ها: رزرو نوار پایین فقط یک بار (روی فوتر) */
+@media (max-width: 639.98px) {
+  .page { padding-block-end: var(--sp-4); }
+  .foot { padding-block-end: calc(var(--bottomnav-h) + var(--sp-3)); }
+}
+.page { padding-block-end: var(--sp-4); }
+
+/* فوتر یک‌خطی و بدون تکرار */
+.foot { justify-content: center; align-items: center; gap: var(--sp-2) var(--sp-4); flex-wrap: wrap; padding-block-start: var(--sp-3); text-align: center; }
+.foot a { display: inline-flex; align-items: center; min-height: 44px; }
+#app[data-view=about] ~ .foot { display: none; }
+@media (max-width: 639.98px) { .foot { flex-direction: row; gap: 0 var(--sp-3); } }
+.lab-grid > .card.link.big-card:not(.chap) { grid-column: 1 / -1; flex-direction: row; align-items: center; height: auto; }
+.lab-grid > .card.link.big-card:not(.chap) > div { width: auto; }
+@media (max-width: 639.98px) {
+  .grid > .card.link:not(.chap) { flex-direction: row; align-items: flex-start; padding: var(--sp-4); }
+  .grid > .card.link.big-card:not(.chap) { padding: var(--sp-4); }
+  .grid { gap: var(--sp-3); }
+  .grid > .card.link:not(.chap) > .ibox, .grid > .card.link:not(.chap) > span:first-child { flex: none; }
+  .grid > .card.link:not(.chap) > div { width: auto; flex: 1; }
+}
+
+/* ---------- رنگ تم: صفحهٔ درس/پروژه و کارت مأموریت از برند انتخابی پیروی می‌کنند ---------- */
+#app[data-view="lesson"][data-acc], #app[data-view="project"][data-acc] { --a: var(--primary); --on-a: var(--on-primary); --a-ink: var(--primary-ink); --a-soft: var(--primary-soft); }
+.card.dk.mission, .mission { background: var(--brand-700); background: linear-gradient(160deg, var(--brand-700), var(--brand-900)); color: var(--white); }
+.card.dk.mission h3, .card.dk.mission p, .mission h3, .mission p { color: var(--white); }
+.page { flex: 1 0 auto; width: 100%; }
+
+
+/* ---------- Splash ورود ---------- */
+#splash { position: fixed; inset: 0; z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-3); padding: var(--sp-6); text-align: center; color: var(--white);
+  background: var(--brand-700); background: radial-gradient(130% 90% at 50% 0%, var(--brand-600), var(--brand-900) 72%);
+  transition: opacity .5s ease, visibility .5s; }
+#splash.out { opacity: 0; visibility: hidden; pointer-events: none; }
+.no-splash #splash { display: none; }
+.splash__orb { position: relative; display: grid; place-items: center; width: 168px; height: 168px; margin-block-end: var(--sp-3); }
+.splash__orb::before, .splash__orb::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); animation: splash-ring 2.4s ease-out infinite; }
+.splash__orb::after { animation-delay: 1.2s; }
+.splash__orb img { width: 120px; height: 120px; border-radius: 32px; box-shadow: 0 10px 0 rgba(0,0,0,.22), 0 24px 48px rgba(0,0,0,.3); animation: splash-pop .7s cubic-bezier(.2,1.4,.4,1) both, splash-bob 3.2s ease-in-out .7s infinite; }
+.splash__title { color: var(--white); font-size: var(--fs-2xl); font-weight: var(--fw-black); margin: 0; animation: splash-up .6s ease .25s both; }
+.splash__tag { color: rgba(255,255,255,.88); font-size: var(--fs-md); margin: 0; animation: splash-up .6s ease .4s both; }
+.splash__bar { width: min(220px, 60vw); height: 8px; margin-block-start: var(--sp-5); border-radius: var(--r-pill); background: rgba(255,255,255,.22); overflow: hidden; animation: splash-up .6s ease .55s both; }
+.splash__bar i { display: block; height: 100%; width: 100%; border-radius: inherit; background: var(--saffron-400, #FFC857); transform-origin: right; animation: splash-load 1.6s ease-in-out .5s both; }
+.splash__by { position: absolute; inset-inline: 0; bottom: calc(var(--sp-6) + env(safe-area-inset-bottom, 0px)); margin: 0; font-size: .8125rem; letter-spacing: .08em; color: rgba(255,255,255,.65); }
+@keyframes splash-ring { from { transform: scale(.7); opacity: .8; } to { transform: scale(1.25); opacity: 0; } }
+@keyframes splash-pop { from { transform: scale(.5) rotate(-8deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes splash-bob { 50% { transform: translateY(-8px); } }
+@keyframes splash-up { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes splash-load { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { #splash *, #splash *::before { animation: none !important; } }
+.splash__title { font-size: clamp(1.5rem, 7vw, 2rem); white-space: nowrap; }

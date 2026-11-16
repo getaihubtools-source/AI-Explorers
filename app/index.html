@@ -13,9 +13,16 @@
   <link rel="preload" href="assets/fonts/Vazirmatn-VF.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/aihub.bundle.css">
   <link rel="stylesheet" href="assets/css/explorers.css">
-  <script>try{var t=localStorage.getItem("aihub-theme"),b=localStorage.getItem("aihub-brand");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);if(b)document.documentElement.setAttribute("data-brand",b)}catch(e){}</script>
+  <script>try{if(navigator.webdriver||sessionStorage.getItem("aix-splash"))document.documentElement.className+=" no-splash"}catch(e){}try{var t=localStorage.getItem("aihub-theme"),b=localStorage.getItem("aihub-brand");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);if(b)document.documentElement.setAttribute("data-brand",b)}catch(e){}</script>
 </head>
 <body class="has-bottomnav">
+<div id="splash" class="pattern-girih" aria-hidden="true">
+  <div class="splash__orb"><img src="assets/img/logo.svg" alt="" width="120" height="120"></div>
+  <h1 class="splash__title">کاوشگران هوش مصنوعی</h1>
+  <p class="splash__tag">یاد بگیر · بپرس · بساز</p>
+  <div class="splash__bar"><i></i></div>
+  <p class="splash__by en">AIhub Tools</p>
+</div>
 <!--ICONS: بر پایهٔ icons.sprite.html دیزاین‌سیستم + چند آیکن خطی هم‌سبک-->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -75,7 +82,7 @@
       </div>
     </header>
     <main class="page" id="app" tabindex="-1"></main>
-    <footer class="foot"><span>© ۱۴۰۵ AIhub Tools · همهٔ حقوق محفوظ است</span><a href="#/about">درباره و پشتیبانی · <span class="en">@aihub_tools</span></a></footer>
+    <footer class="foot"><span>© ۱۴۰۵ AIhub Tools · همهٔ حقوق محفوظ است</span><a href="#/about">درباره و پشتیبانی</a></footer>
   </div>
 </div>
 <nav class="bottomnav" aria-label="ناوبری موبایل">
@@ -98,5 +105,12 @@
 <script defer src="js/core/license.js"></script>
 <script defer src="js/ui/icons.js"></script><script defer src="js/ui/enhance.js"></script><script defer src="js/ui/engines.js"></script><script defer src="js/ui/poster.js"></script><script defer src="js/ui/views.js"></script><script defer src="js/ui/labs.js"></script><script defer src="js/ui/studio.js"></script><script defer src="js/ui/activate.js"></script><script defer src="js/ui/router.js"></script>
 <script defer src="js/main.js"></script>
+<script>
+(function(){var s=document.getElementById("splash");if(!s)return;var t0=Date.now(),done=false;
+function hide(){if(done)return;done=true;s.className+=" out";try{sessionStorage.setItem("aix-splash","1")}catch(e){}setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},600)}
+function go(){setTimeout(hide,Math.max(0,1700-(Date.now()-t0)))}
+if(document.readyState==="complete")go();else window.addEventListener("load",go);
+setTimeout(hide,5000);s.addEventListener("click",hide)})();
+</script>
 </body>
 </html>

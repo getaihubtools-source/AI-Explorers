@@ -20,7 +20,7 @@
     btn.addEventListener("click", go); inp.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
     root.appendChild(h("div", { class: "card center", style: "max-width:520px;margin:0 auto" },
       h("h2", null, gated ? "این بخش با کد فعال‌سازی باز می‌شود" : "فعال‌سازی برنامه"),
-      h("p", null, "فعال‌سازی را والد انجام دهد. دو قدم دارد:"),
+      h("p", null, "فعال‌سازی را والدین انجام دهند. دو قدم دارد:"),
       h("ol", { style: "text-align:right;margin:8px 20px" }, h("li", null, "کد دستگاه این مرورگر را برای فروشنده بفرست."), h("li", null, "کدی که فروشنده می‌فرستد را پایین بگذار. بعد از این دیگر اینترنت لازم نیست.")),
       h("div", { class: "card", style: "margin:8px 0" }, h("div", null, "کد دستگاه شما"), h("strong", { dir: "ltr", style: "font-size:1.5rem;letter-spacing:.12em" }, dev), h("div", null, cp)),
       h("label", { for: "akey", class: "sr-only", style: "position:absolute;left:-9999px" }, "کد فعال‌سازی"), inp, msg,

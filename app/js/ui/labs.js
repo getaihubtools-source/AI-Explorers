@@ -184,14 +184,14 @@
       msg.className = "fb show " + (tight ? "no" : "ok"); msg.textContent = "موضوع‌های متفاوت در فید فعلی: " + u.fa(n) + " از " + u.fa(TOPICS.length) + (tight ? ". فید باریک شد! بیشتر فید فقط یک موضوع است. به این می‌گویند «حباب فیلتر»." : "");
       if (likes >= 6 && tight) { award("feed"); }
     }
-    root.appendChild(h("div", { class: "card" }, h("h3", null, "ماموریت کاوشگر"), h("ol", { class: "reqs" }, h("li", null, "شش بار فقط یک موضوع را بپسند."), h("li", null, "ببین فید چطور تنگ می‌شود."), h("li", null, "راه‌حل پیدا کن: «علاقه ندارم»، جست‌وجوی عمدی موضوع تازه یا نگاه کردن با والد.")), xpNote("feed")));
+    root.appendChild(h("div", { class: "card" }, h("h3", null, "ماموریت کاوشگر"), h("ol", { class: "reqs" }, h("li", null, "شش بار فقط یک موضوع را بپسند."), h("li", null, "ببین فید چطور تنگ می‌شود."), h("li", null, "راه‌حل پیدا کن: «علاقه ندارم»، جست‌وجوی عمدی موضوع تازه یا نگاه کردن با والدین.")), xpNote("feed")));
     render();
   };
 
   // ================= صفحهٔ آزمایشگاه‌ها =================
   V.labs = function (root) {
     u.clear(root); root.appendChild(head("آزمایشگاه‌ها", "اینجا چیزهایی را امتحان می‌کنی که فقط خواندنشان کافی نیست. همه آفلاین‌اند و به هیچ هوش مصنوعی واقعی وصل نمی‌شوند."));
-    var g = h("div", { class: "grid" });
+    var g = h("div", { class: "grid wide" });
     g.appendChild(h("a", { class: "card link big-card", href: "#/labs/model" }, h("span", { html: AIX.ic("flask", 32) }), h("div", null, h("h3", null, "آموزش مدل: گربه یا سگ؟"), h("p", null, "نمونه‌ها را خودت انتخاب کن و ببین سوگیری داده چطور برنامه را گمراه می‌کند."), xpNote("model"))));
     g.appendChild(h("a", { class: "card link big-card", href: "#/labs/feed" }, h("span", { html: AIX.ic("loop", 32) }), h("div", null, h("h3", null, "فید پیشنهادی و حباب فیلتر"), h("p", null, "با پسندیدن، فید را تنگ کن و راه‌های بیرون آمدن را پیدا کن."), xpNote("feed"))));
     root.appendChild(g);
@@ -207,7 +207,7 @@
     var items = [
       { f: "parent-guide.pdf", t: "راهنمای یک‌صفحه‌ای والدین", d: "پنج پرسش خوب، قانون‌های ایمنی و نشانه‌هایی که باید جدی گرفت. رایگان.", free: true },
       { f: "workbook.pdf", t: "کتاب کار کاوشگر (۹ صفحه)", d: "میثاق‌نامه، کارآگاه توهم، شناسنامهٔ گفت‌وگو، برچسب شفافیت، ردیاب مسیر و ...", free: false },
-      { f: "certificate.pdf", t: "گواهی تشویقی", d: "برای امضای والد یا معلم. مدرک رسمی نیست و فقط انگیزه‌بخش خانگی است.", free: false }
+      { f: "certificate.pdf", t: "گواهی تشویقی", d: "برای امضای والدین یا معلم. مدرک رسمی نیست و فقط انگیزه‌بخش خانگی است.", free: false }
     ];
     var g = h("div", { class: "grid" });
     items.forEach(function (it) {
