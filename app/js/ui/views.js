@@ -59,7 +59,7 @@
 
   function familyStation() {
     var f = P().family(), r = P().familyReady();
-    return h("a", { class: "card family-station", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 22) }), h("div", { class: "f1" }, h("strong", null, "فصل ۵ · ایستگاه خانواده (ویژهٔ والدین)"), h("p", { class: "muted" }, f.done ? "توافق‌نامهٔ خانوادگی امضا شد." : "توافق‌نامهٔ خانوادگی را با والدینت بساز. اجباری نیست، ولی قبل از فصل ۶ پیشنهاد می‌شود. " + u.fa(r.rules) + " از " + u.fa(r.total) + " قانون پذیرفته شده.")), h("span", { class: "chip " + (f.done ? "ok" : "") }, f.done ? "کامل" : "باز"));
+    return h("a", { class: "card family-station", href: "#/family", "data-acc": ACC.green }, h("span", { class: "ibox", html: AIX.ic("users", 22) }), h("div", { class: "f1" }, h("strong", null, "فصل ۵ · ایستگاه خانواده (ویژهٔ والدین)"), h("p", { class: "muted" }, f.done ? "توافق‌نامهٔ خانوادگی امضا شد." : "توافق‌نامهٔ خانوادگی را با والدینت بساز. اجباری نیست، ولی قبل از فصل ۶ پیشنهاد می‌شود. " + u.fa(r.rules) + " از " + u.fa(r.total) + " قانون پذیرفته شده."), h("span", { class: "chip " + (f.done ? "ok" : "") }, f.done ? "کامل" : "باز")));
   }
 
   // ---------- فصل ----------
@@ -221,14 +221,14 @@
       h("div", { class: "row-actions" }, h("button", { type: "button", class: "btn", onclick: function () { u.download("aihub-explorers-corrupt-" + u.today() + ".json", AIX.store.corruptRaw() || "", "application/json"); } }, "دانلود نسخهٔ خراب"), h("button", { type: "button", class: "btn ghost", onclick: function () { AIX.store.clearCorrupt(); AIX.router.render(); } }, "پاک کردن نسخهٔ خراب"))));
     var nick = h("input", { type: "text", maxlength: 20, value: st.profile.nick, placeholder: "اسم مستعار (اختیاری)" }); nick.addEventListener("input", function () { st.profile.nick = nick.value; AIX.store.save(); });
     root.appendChild(h("section", { class: "card" }, h("h3", null, "پروفایل"), h("label", { class: "field" }, h("span", null, "اسم مستعار"), nick, h("small", { class: "muted" }, "نام کامل، سن دقیق و اطلاعات شخصی ننویس.")),
-      h("fieldset", { class: "field" }, h("legend", null, "گروه سنی (برای پیشنهاد سطح چالش)"), [["", "نمی‌خواهم بگویم"], ["a", "۱۰ تا ۱۱ سال"], ["b", "۱۱ تا ۱۲ سال"], ["c", "۱۲ تا ۱۳ سال"]].map(function (o) { var r = h("input", { type: "radio", name: "age", value: o[0] }); r.checked = st.profile.ageGroup === o[0]; r.addEventListener("change", function () { st.profile.ageGroup = o[0]; AIX.store.save(true); }); return h("label", { class: "check" }, r, " " + o[1]); }))));
+      h("fieldset", { class: "field" }, h("legend", null, "گروه سنی (برای پیشنهاد سطح چالش)"), [["", "نمی‌خواهم بگویم"], ["a", "۱۱ ساله"], ["b", "۱۲ ساله"], ["c", "۱۳ ساله"]].map(function (o) { var r = h("input", { type: "radio", name: "age", value: o[0] }); r.checked = st.profile.ageGroup === o[0]; r.addEventListener("change", function () { st.profile.ageGroup = o[0]; AIX.store.save(true); }); return h("label", { class: "check" }, r, " " + o[1]); }))));
     root.appendChild(appearanceCard());
     var fs = h("input", { type: "range", min: 0.9, max: 1.3, step: 0.05, value: st.profile.fontScale, "aria-label": "اندازهٔ نوشته" }); fs.addEventListener("input", function () { st.profile.fontScale = Number(fs.value); document.documentElement.style.setProperty("--fs", fs.value); AIX.store.save(); });
     var open = h("input", { type: "checkbox" }); open.checked = !!st.profile.open;
     open.addEventListener("change", function () { if (open.checked && !confirm("حالت آزاد همهٔ مرحله‌ها را باز می‌کند. این حالت برای والدین یا معلم است. فعال شود؟")) { open.checked = false; return; } st.profile.open = open.checked; AIX.store.save(true); u.toast(open.checked ? "حالت آزاد فعال شد." : "حالت آزاد خاموش شد."); });
     var lt = h("input", { type: "checkbox" }); lt.checked = P().lightMode();
     lt.addEventListener("change", function () { st.profile.light = lt.checked; AIX.store.save(true); u.toast(lt.checked ? "حالت سبک روشن شد." : "حالت سبک خاموش شد."); });
-    root.appendChild(h("section", { class: "card" }, h("h3", null, "نمایش و حالت‌ها"), h("label", { class: "field" }, h("span", null, "اندازهٔ نوشته"), fs), h("label", { class: "check" }, lt, " حالت سبک: فقط درس، آزمون و چالش (مناسب ۱۰ تا ۱۱ سال؛ برای این گروه خودکار روشن است)"), h("label", { class: "check" }, open, " حالت آزاد (برای والدین یا معلم): همهٔ مرحله‌ها باز باشند")));
+    root.appendChild(h("section", { class: "card" }, h("h3", null, "نمایش و حالت‌ها"), h("label", { class: "field" }, h("span", null, "اندازهٔ نوشته"), fs), h("label", { class: "check" }, lt, " حالت سبک: فقط درس، آزمون و چالش (مناسب ۱۱ ساله؛ برای این گروه خودکار روشن است)"), h("label", { class: "check" }, open, " حالت آزاد (برای والدین یا معلم): همهٔ مرحله‌ها باز باشند")));
     var file = h("input", { type: "file", accept: "application/json,.json", class: "sr-only", id: "restore-file" });
     file.addEventListener("change", function () {
       var f = file.files[0]; if (!f) return; var rd = new FileReader();
@@ -239,6 +239,7 @@
       h("div", { class: "row-actions" }, h("button", { type: "button", class: "btn primary", html: AIX.ic("download", 18) + " دانلود پشتیبان", onclick: function () { u.download("aihub-explorers-backup-" + u.today() + ".json", AIX.store.exportJSON(), "application/json"); AIX.store.markBackup(); u.toast("فایل پشتیبان ساخته شد.", "ok"); } }), h("label", { class: "btn", for: "restore-file" }, "بازیابی از فایل"), file)));
     root.appendChild(h("section", { class: "card danger" }, h("h3", null, "پاک کردن پیشرفت"), h("p", { class: "muted" }, "همهٔ امتیازها، نوشته‌ها و نشان‌ها پاک می‌شوند. اول پشتیبان بگیر."), h("button", { type: "button", class: "btn", onclick: function () { if (prompt("برای تأیید، کلمهٔ «پاک» را بنویس.") === "پاک") { AIX.store.reset(); u.toast("پیشرفت پاک شد."); go("#/"); AIX.router.render(); } } }, "پاک کردن همه‌چیز")));
     root.appendChild(h("section", { class: "card" }, h("h3", null, "دربارهٔ حریم خصوصی"), h("p", null, "این برنامه حساب کاربری، ردیابی و ارتباط با هوش مصنوعی ندارد. فقط در مرورگر همین دستگاه ذخیره می‌کند. اگر مرورگر را پاک کنی یا دستگاه را عوض کنی، بدون پشتیبان چیزی نمی‌ماند.")));
+    V.aboutBlock(root);
   };
 
 
@@ -283,12 +284,12 @@
 
   // ---------- والدین و واژه‌نامه ----------
   V.parents = function (root) {
-    u.clear(root); root.appendChild(page("راهنمای والدین · فصل ۵", "همراهی هوشمندانه با نوجوان ۱۰ تا ۱۳ ساله. والدین پلیس نیستند؛ همراه، راهنما و مربی است."));
+    u.clear(root); root.appendChild(page("راهنمای والدین · فصل ۵", "همراهی هوشمندانه با نوجوان ۱۱ تا ۱۳ ساله. والدین پلیس نیستند؛ همراه، راهنما و مربی است."));
     root.appendChild(h("a", { class: "card link", href: "#/family" }, h("span", { html: AIX.ic("users", 24) }), h("div", null, h("strong", null, "ایستگاه خانواده: توافق‌نامهٔ تعاملی"), h("p", null, "والدین و کودک با هم قانون‌ها را می‌پذیرند و امضا می‌کنند."))));
     var c = AIX.content.parents || []; c.forEach(function (p, i) { root.appendChild(h("details", { class: "card acc", open: i === 0 ? true : null }, h("summary", null, p.title), AIX.enhance(html("content", p.html), "parents:p" + i))); });
   };
-  V.about = function (root) {
-    u.clear(root);
+  V.aboutBlock = function (root) {
+    var box = h("div", { class: "about-block", id: "about-block" }); var host = root; root = box; host.appendChild(box);
     var yr = u.fa(1405), ID = "@aihub_tools", IDB = "\u2066" + ID + "\u2069";
     var ch = [["rubika", "روبیکا", "https://rubika.ir/aihub_tools", "chat", "blue"], ["telegram", "تلگرام", "https://t.me/aihub_tools", "send", "cyan"], ["instagram", "اینستاگرام", "https://instagram.com/aihub_tools", "camera", "purple"]];
     root.appendChild(h("section", { class: "about-hero pattern-girih" }, h("img", { src: "assets/img/logo.svg", alt: "", width: 88, height: 88 }),

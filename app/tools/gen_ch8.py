@@ -21,7 +21,7 @@ def lesson(day, title, name, mission, tip, learn, explore, investigate, create, 
     secs = [{"key": "learn", "html": learn}, {"key": "explore", "html": explore}, {"key": "investigate", "html": investigate}]
     if create: secs.append({"key": "create", "html": create})
     return {"day": day, "title": title, "name": name, "mission": mission, "tip": tip, "sections": secs,
-            "challenges": [{"level": i + 1, "ages": a, "html": f"<p>{t}</p>"} for i, (a, t) in enumerate(zip(["۱۰–۱۱ سال", "۱۱–۱۲ سال", "۱۲–۱۳ سال"], ch))],
+            "challenges": [{"level": i + 1, "ages": a, "html": f"<p>{t}</p>"} for i, (a, t) in enumerate(zip(["۱۱ سال", "۱۲ سال", "۱۳ سال"], ch))],
             "reflect": refl, "progress": prog}
 
 

@@ -41,7 +41,7 @@ def tbl(head, rows, blank=0):
 W = []
 W.append('''<div class="page" style="text-align:center;padding-top:60pt">
 <div style="font-size:60pt">🤖</div><h1>کتاب کار کاوشگر هوش مصنوعی</h1>
-<p class="sub" style="font-size:13pt;margin-top:6pt">همراه برنامهٔ AIhub AI Explorers · برای ۱۰ تا ۱۳ سال</p>
+<p class="sub" style="font-size:13pt;margin-top:6pt">همراه برنامهٔ AIhub AI Explorers · برای ۱۱ تا ۱۳ سال</p>
 <div class="box" style="margin:40pt 30pt;text-align:right"><p>نام (یا اسم مستعار): <span style="display:inline-block;width:60%;border-bottom:1pt solid #aab0d4">&nbsp;</span></p>
 <p>تاریخ شروع: <span style="display:inline-block;width:40%;border-bottom:1pt solid #aab0d4">&nbsp;</span></p>
 <p class="sub">اطلاعات شخصی (نام کامل، آدرس، شمارهٔ تلفن) نمی‌نویسیم.</p></div>

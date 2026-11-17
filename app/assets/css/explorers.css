@@ -611,3 +611,65 @@ main .row select { flex: 1; width: auto; }
 @keyframes splash-load { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { #splash *, #splash *::before { animation: none !important; } }
 .splash__title { font-size: clamp(1.5rem, 7vw, 2rem); white-space: nowrap; }
+
+
+/* ---------- کارت‌های شبکه: ثابت، بدون حرکت، جمع‌وجور ---------- */
+.card.link:hover, .chap:hover:not(.locked), a.node-l:hover { transform: none; }
+.card.link, .chap { transition: box-shadow var(--dur-base), border-color var(--dur-base); }
+.grid, .grid.wide, .grid.lab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3) var(--sp-4); }
+.grid > .card.link:not(.chap), .grid > .card.link.big-card:not(.chap), .lab-grid > .card.link.big-card:not(.chap) { flex-direction: row; align-items: flex-start; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5); height: auto; }
+.grid > .card.link:not(.chap) > div, .lab-grid > .card.link.big-card:not(.chap) > div { width: auto; flex: 1 1 auto; gap: var(--sp-1); }
+.grid > .card.link:not(.chap) > div > p, .grid > .card.link:not(.chap) > div > .muted { font-size: var(--fs-sm); line-height: 1.7; margin: 0; }
+.grid > .card.link:not(.chap) > div > .chip { margin-block-start: var(--sp-2); }
+.grid > .card.link:not(.chap) > .ibox, .grid > .card.link:not(.chap) > span:first-child { flex: none; }
+.grid > .card.link:not(.chap):last-child:nth-child(odd) { grid-column: 1 / -1; }
+.lab-grid > .card.link.big-card:not(.chap) { grid-column: 1 / -1; }
+@media (max-width: 767.98px) {
+  .grid, .grid.wide, .grid.lab-grid { grid-template-columns: minmax(0, 1fr); gap: var(--sp-3); }
+  .grid > .card.link:not(.chap) { padding: var(--sp-4); }
+}
+@media (max-width: 639.98px) { .page { padding-block-end: calc(var(--bottomnav-h) + var(--sp-5)); } }
+.about-block { margin-block-start: var(--sp-6); display: grid; gap: var(--sp-5); }
+.about-block > section { margin: 0; }
+
+
+/* ---------- صفحهٔ قفل / فعال‌سازی ---------- */
+.gate { max-width: 520px; margin: var(--sp-5) auto 0; padding: var(--sp-6) var(--sp-5); text-align: center; display: grid; gap: var(--sp-3); justify-items: center; }
+.gate-ico { display: grid; place-items: center; width: 64px; height: 64px; border-radius: var(--r-lg); background: var(--primary-soft); color: var(--primary-ink); }
+.gate h2 { margin: 0; }
+.gate p { margin: 0; }
+.gate-steps { width: 100%; margin: 0; padding: 0; list-style: none; counter-reset: g; display: grid; gap: var(--sp-2); text-align: start; }
+.gate-steps li { counter-increment: g; display: flex; gap: var(--sp-3); align-items: flex-start; line-height: 1.7; }
+.gate-steps li::before { content: counter(g, persian); flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: var(--on-primary); font-weight: var(--fw-bold); font-size: .875rem; }
+.gate-code { width: 100%; display: grid; gap: var(--sp-1); justify-items: center; padding: var(--sp-4); border-radius: var(--r-md); background: var(--surface-2); border: 1px dashed var(--border-strong, var(--border)); }
+.gate-code small { color: var(--text-muted); }
+.gate-code strong { font-size: 1.5rem; letter-spacing: .12em; }
+.gate-input { width: 100%; font-size: .875rem; word-break: break-all; }
+.gate-msg { min-height: 1.6em; width: 100%; }
+.gate-actions { justify-content: center; width: 100%; }
+#app[data-view=activate], #app[data-view=labs], #app[data-view=lab] { overflow-x: clip; }
+.gate-msg:empty { display: none; }
+.gate { margin-block-start: var(--sp-3); padding: var(--sp-5); gap: var(--sp-3); }
+.gate-code { padding: var(--sp-3); } .gate-code strong { font-size: 1.35rem; }
+.gate-ico { width: 56px; height: 56px; }
+.gate-input { min-height: 84px; }
+
+.family-station .f1 { min-width: 0; display: flex; flex-direction: column; gap: var(--sp-1); }
+.family-station .chip, .family-remind .chip, .card > span.chip { flex: none; white-space: nowrap; align-self: flex-start; margin-block-start: var(--sp-1); }
+.card.link.gated { background: var(--surface-2); }
+
+
+/* ---------- جدول‌ها ---------- */
+td, th { overflow-wrap: normal; word-break: normal; hyphens: none; }
+@media (max-width: 639.98px) {
+  .content table:not(.stack) { display: block; overflow-x: auto; }
+  .content table:not(.stack) td, .content table:not(.stack) th { min-width: 8rem; }
+  table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+  .content table.stack { overflow: visible; }
+  table.stack tr.t-head { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  table.stack tr { border: 1px solid var(--border); border-radius: var(--r-md); margin-block-end: var(--sp-3); background: var(--surface); overflow: hidden; }
+  table.stack td { border: 0; padding: var(--sp-2) var(--sp-4); }
+  table.stack td.t-key { background: var(--a-soft); color: var(--text); font-weight: var(--fw-bold); padding: var(--sp-3) var(--sp-4); }
+  table.stack td[data-label]::before { content: attr(data-label); display: block; margin-block-end: 2px; font-size: .8125rem; font-weight: var(--fw-bold); color: var(--a-ink); }
+  table.stack .cell-input { width: 100%; min-width: 0; }
+}

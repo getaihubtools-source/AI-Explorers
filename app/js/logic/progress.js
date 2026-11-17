@@ -140,7 +140,7 @@
   };
 
   // ---------- بازشدن مراحل ----------
-  // حالت سبک: فقط درس، آزمون و چالش (هستهٔ روز). اگر کاربر انتخابی نکرده باشد، برای گروه ۱۰–۱۱ سال خودکار روشن است.
+  // حالت سبک: فقط درس، آزمون و چالش (هستهٔ روز). اگر کاربر انتخابی نکرده باشد، برای گروه ۱۱ سال خودکار روشن است.
   P.lightMode = function () { var pr = S().get().profile; return pr.light === true || ((pr.light === null || pr.light === undefined) && pr.ageGroup === "a"); };
   P.openMode = function () { return !!S().get().profile.open; };
   P.isDone = function (id) { return !!S().day(id).done; };
